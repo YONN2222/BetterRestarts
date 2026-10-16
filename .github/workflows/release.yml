@@ -37,14 +37,14 @@ jobs:
       - name: Attach the jar to the GitHub release
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh release upload "$GITHUB_REF_NAME" build/libs/BetterRestarts-*[0-9].jar --clobber
+        run: gh release upload "$GITHUB_REF_NAME" "$(ls build/libs/BetterRestarts-*.jar | grep -v -e -plain -e -sources | head -n 1)" --clobber
       - name: Publish to Modrinth
         env:
           MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}
         run: >
           ./gradlew -p publish modrinth
           -PreleaseVersion="${GITHUB_REF_NAME#v}"
-          -Pjar="$GITHUB_WORKSPACE/$(ls build/libs/BetterRestarts-*[0-9].jar | head -n 1)"
+          -Pjar="$GITHUB_WORKSPACE/$(ls build/libs/BetterRestarts-*.jar | grep -v -e -plain -e -sources | head -n 1)"
           -PgameVersions="$(grep '^supportedVersions=' gradle.properties | cut -d= -f2)"
           -PnotesFile="$GITHUB_WORKSPACE/notes.md"
       - name: Publish to Hangar
@@ -53,6 +53,6 @@ jobs:
         run: >
           ./gradlew -p publish publishPluginPublicationToHangar
           -PreleaseVersion="${GITHUB_REF_NAME#v}"
-          -Pjar="$GITHUB_WORKSPACE/$(ls build/libs/BetterRestarts-*[0-9].jar | head -n 1)"
+          -Pjar="$GITHUB_WORKSPACE/$(ls build/libs/BetterRestarts-*.jar | grep -v -e -plain -e -sources | head -n 1)"
           -PgameVersions="$(grep '^supportedVersions=' gradle.properties | cut -d= -f2)"
           -PnotesFile="$GITHUB_WORKSPACE/notes.md"

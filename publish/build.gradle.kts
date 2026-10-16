@@ -8,13 +8,14 @@ plugins {
 
 val pluginName = "BetterRestarts"
 val releaseVersion = providers.gradleProperty("releaseVersion").get()
-val versionParts = releaseVersion.split(Regex("[.-]"))
-val major = versionParts[0].toInt()
-val minor = versionParts[1].toInt()
+// Stable by default. Only a suffix makes it a pre release:
+// 1.2.0-alpha, 1.2.0-alpha12 -> alpha, 1.2.0-pre, 1.2.0-pre3 -> beta
+val suffix = releaseVersion.substringAfter('-', "").lowercase()
 val stage = when {
-    major > 0 -> "release"
-    minor > 0 -> "beta"
-    else -> "alpha"
+    suffix.startsWith("alpha") -> "alpha"
+    suffix.startsWith("pre") -> "beta"
+    suffix.isEmpty() -> "release"
+    else -> throw GradleException("Unknown version suffix '$suffix'. Use -alpha, -alphaN, -pre or -preN.")
 }
 val jarFile = layout.projectDirectory.file(providers.gradleProperty("jar").get())
 val mcVersions = providers.gradleProperty("gameVersions").get().split(",")
