@@ -1,0 +1,38 @@
+prefix: "<gold><bold>إعادة التشغيل</bold> <dark_gray>»</dark_gray> "
+
+actionbar: "<yellow>إعادة تشغيل الخادم بعد <white><clock></white>"
+actionbar-reason: "<yellow>إعادة تشغيل الخادم بعد <white><clock></white> <dark_gray>|</dark_gray> <gray><reason></gray>"
+
+scheduled: "<prefix><yellow>سيُعاد تشغيل الخادم بعد <white><time></white>."
+scheduled-reason: "<prefix><yellow>سيُعاد تشغيل الخادم بعد <white><time></white>. <gray>السبب: <reason></gray>"
+reminder: "<prefix><yellow>سيُعاد تشغيل الخادم بعد <white><time></white>."
+reminder-reason: "<prefix><yellow>سيُعاد تشغيل الخادم بعد <white><time></white>. <gray>السبب: <reason></gray>"
+
+title-main: "<gold><bold>إعادة تشغيل الخادم</bold>"
+title-sub: "<yellow>بعد <white><time></white>"
+title-sub-reason: "<yellow>بعد <white><time></white> <gray>(<reason>)</gray>"
+
+countdown-main: "<red><bold><seconds></bold>"
+countdown-sub: "<yellow>الخادم يُعاد تشغيله"
+
+restarting-main: "<red><bold>جارٍ إعادة التشغيل</bold>"
+restarting-sub: "<gray>نراكم بعد قليل"
+
+cancelled-chat: "<prefix><green>ألغى <white><player></white> إعادة التشغيل."
+cancelled-title: "<green><bold>أُلغيت إعادة التشغيل</bold>"
+cancelled-sub: "<gray>تابعوا اللعب"
+
+kick: "<yellow>الخادم يُعاد تشغيله.\n<gray>يمكنك الانضمام مجددًا بعد دقيقة."
+
+usage: "<prefix><gray>الاستخدام: <white>/<label> <الوقت|cancel|status|reload> [السبب]</white>\n<prefix><gray>أمثلة على الوقت: <white>now, 30s, 5m, 1h, 1h30m</white>"
+invalid-time: "<prefix><red>'<input>' ليس وقتًا صالحًا. جرّب <white>/<label> 5m</white>."
+too-long: "<prefix><red>الحد الأقصى المسموح به هو <white><max></white>."
+rescheduled: "<prefix><gray>تم تغيير العد التنازلي من <white><old></white> إلى <white><new></white>."
+too-short: "<prefix><red>هذا سينهي العد التنازلي فورًا. استخدم <white>now</white>."
+nothing-running: "<prefix><red>لا توجد إعادة تشغيل مجدولة."
+no-permission: "<red>ليس لديك صلاحية للقيام بذلك."
+status-idle: "<prefix><gray>لا توجد إعادة تشغيل مجدولة."
+status-running: "<prefix><yellow>إعادة التشغيل بعد <white><time></white>."
+status-running-reason: "<prefix><yellow>إعادة التشغيل بعد <white><time></white> <gray>(<reason>)</gray>."
+status-next: "<prefix><gray>إعادة التشغيل المجدولة التالية: <white><when></white>"
+reloaded: "<prefix><green>تمت إعادة تحميل الإعدادات."

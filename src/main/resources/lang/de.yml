@@ -1,0 +1,38 @@
+prefix: "<gold><bold>Restart</bold> <dark_gray>»</dark_gray> "
+
+actionbar: "<yellow>Server Neustart in <white><clock></white>"
+actionbar-reason: "<yellow>Server Neustart in <white><clock></white> <dark_gray>|</dark_gray> <gray><reason></gray>"
+
+scheduled: "<prefix><yellow>Der Server startet in <white><time></white> neu."
+scheduled-reason: "<prefix><yellow>Der Server startet in <white><time></white> neu. <gray>Grund: <reason></gray>"
+reminder: "<prefix><yellow>Der Server startet in <white><time></white> neu."
+reminder-reason: "<prefix><yellow>Der Server startet in <white><time></white> neu. <gray>Grund: <reason></gray>"
+
+title-main: "<gold><bold>Server Neustart</bold>"
+title-sub: "<yellow>in <white><time></white>"
+title-sub-reason: "<yellow>in <white><time></white> <gray>(<reason>)</gray>"
+
+countdown-main: "<red><bold><seconds></bold>"
+countdown-sub: "<yellow>Server startet neu"
+
+restarting-main: "<red><bold>Neustart</bold>"
+restarting-sub: "<gray>Bis gleich"
+
+cancelled-chat: "<prefix><green>Der Neustart wurde von <white><player></white> abgebrochen."
+cancelled-title: "<green><bold>Neustart abgebrochen</bold>"
+cancelled-sub: "<gray>Weiterspielen"
+
+kick: "<yellow>Der Server startet neu.\n<gray>Du kannst in einer Minute wieder joinen."
+
+usage: "<prefix><gray>Benutzung: <white>/<label> <Zeit|cancel|status|reload> [Grund]</white>\n<prefix><gray>Beispiele: <white>now, 30s, 5m, 1h, 1h30m</white>"
+invalid-time: "<prefix><red>'<input>' ist keine gültige Zeit. Versuch <white>/<label> 5m</white>."
+too-long: "<prefix><red>Maximal erlaubt sind <white><max></white>."
+rescheduled: "<prefix><gray>Countdown geändert von <white><old></white> auf <white><new></white>."
+too-short: "<prefix><red>Damit wäre der Countdown sofort vorbei. Nimm dafür <white>now</white>."
+nothing-running: "<prefix><red>Es ist kein Neustart geplant."
+no-permission: "<red>Dafür hast du keine Berechtigung."
+status-idle: "<prefix><gray>Es ist kein Neustart geplant."
+status-running: "<prefix><yellow>Neustart in <white><time></white>."
+status-running-reason: "<prefix><yellow>Neustart in <white><time></white> <gray>(<reason>)</gray>."
+status-next: "<prefix><gray>Nächster geplanter Neustart: <white><when></white>"
+reloaded: "<prefix><green>Konfiguration neu geladen."

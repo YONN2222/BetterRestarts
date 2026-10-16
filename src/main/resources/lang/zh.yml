@@ -1,0 +1,38 @@
+prefix: "<gold><bold>重启</bold> <dark_gray>»</dark_gray> "
+
+actionbar: "<yellow>服务器将在 <white><clock></white> 后重启"
+actionbar-reason: "<yellow>服务器将在 <white><clock></white> 后重启 <dark_gray>|</dark_gray> <gray><reason></gray>"
+
+scheduled: "<prefix><yellow>服务器将在 <white><time></white> 后重启。"
+scheduled-reason: "<prefix><yellow>服务器将在 <white><time></white> 后重启。<gray>原因：<reason></gray>"
+reminder: "<prefix><yellow>服务器将在 <white><time></white> 后重启。"
+reminder-reason: "<prefix><yellow>服务器将在 <white><time></white> 后重启。<gray>原因：<reason></gray>"
+
+title-main: "<gold><bold>服务器重启</bold>"
+title-sub: "<yellow><white><time></white> 后"
+title-sub-reason: "<yellow><white><time></white> 后 <gray>(<reason>)</gray>"
+
+countdown-main: "<red><bold><seconds></bold>"
+countdown-sub: "<yellow>服务器正在重启"
+
+restarting-main: "<red><bold>正在重启</bold>"
+restarting-sub: "<gray>稍后见"
+
+cancelled-chat: "<prefix><green>重启已被 <white><player></white> 取消。"
+cancelled-title: "<green><bold>重启已取消</bold>"
+cancelled-sub: "<gray>继续游戏吧"
+
+kick: "<yellow>服务器正在重启。\n<gray>请一分钟后重新加入。"
+
+usage: "<prefix><gray>用法：<white>/<label> <时间|cancel|status|reload> [原因]</white>\n<prefix><gray>时间示例：<white>now, 30s, 5m, 1h, 1h30m</white>"
+invalid-time: "<prefix><red>“<input>”不是有效的时间。试试 <white>/<label> 5m</white>。"
+too-long: "<prefix><red>最长允许 <white><max></white>。"
+rescheduled: "<prefix><gray>倒计时已从 <white><old></white> 改为 <white><new></white>。"
+too-short: "<prefix><red>这样倒计时会立刻结束，请改用 <white>now</white>。"
+nothing-running: "<prefix><red>当前没有计划中的重启。"
+no-permission: "<red>你没有权限执行此操作。"
+status-idle: "<prefix><gray>当前没有计划中的重启。"
+status-running: "<prefix><yellow>距离重启还有 <white><time></white>。"
+status-running-reason: "<prefix><yellow>距离重启还有 <white><time></white> <gray>(<reason>)</gray>。"
+status-next: "<prefix><gray>下一次计划重启：<white><when></white>"
+reloaded: "<prefix><green>配置已重新加载。"

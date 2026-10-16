@@ -1,0 +1,29 @@
+name: ${name}
+version: ${version}
+main: com.yonn2222.betterrestarts.BetterRestarts
+api-version: '1.21'
+folia-supported: true
+authors: [${author}]
+description: ${description}
+website: ${website}
+permissions:
+  betterrestarts.restart:
+    description: Schedule a restart
+    default: op
+  betterrestarts.cancel:
+    description: Cancel a scheduled restart
+    default: op
+  betterrestarts.status:
+    description: Show the restart status
+    default: op
+  betterrestarts.reload:
+    description: Reload the configuration
+    default: op
+  betterrestarts.*:
+    description: All BetterRestarts permissions
+    default: op
+    children:
+      betterrestarts.restart: true
+      betterrestarts.cancel: true
+      betterrestarts.status: true
+      betterrestarts.reload: true
