@@ -1,7 +1,7 @@
 name: Release
 on:
-  push:
-    tags: ['v*']
+  release:
+    types: [published]
 
 permissions:
   contents: write
@@ -31,16 +31,13 @@ jobs:
       - name: Build and test
         run: ./gradlew build
       - name: Collect release notes
-        run: |
-          version="${GITHUB_REF_NAME#v}"
-          awk -v v="[$version]" '/^## /{p = ($2 == v)} p && !/^## /' CHANGELOG.md > notes.md
-      - name: Create GitHub release
+        env:
+          RELEASE_BODY: ${{ github.event.release.body }}
+        run: printf '%s\n' "$RELEASE_BODY" > notes.md
+      - name: Attach the jar to the GitHub release
         env:
           GH_TOKEN: ${{ github.token }}
-        run: |
-          flags=""
-          case "$GITHUB_REF_NAME" in v0.*) flags="--prerelease" ;; esac
-          gh release create "$GITHUB_REF_NAME" build/libs/BetterRestarts-*[0-9].jar --title "BetterRestarts ${GITHUB_REF_NAME#v}" --notes-file notes.md $flags
+        run: gh release upload "$GITHUB_REF_NAME" build/libs/BetterRestarts-*[0-9].jar --clobber
       - name: Publish to Modrinth
         env:
           MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}
@@ -49,6 +46,7 @@ jobs:
           -PreleaseVersion="${GITHUB_REF_NAME#v}"
           -Pjar="$GITHUB_WORKSPACE/$(ls build/libs/BetterRestarts-*[0-9].jar | head -n 1)"
           -PgameVersions="$(grep '^supportedVersions=' gradle.properties | cut -d= -f2)"
+          -PnotesFile="$GITHUB_WORKSPACE/notes.md"
       - name: Publish to Hangar
         env:
           HANGAR_TOKEN: ${{ secrets.HANGAR_TOKEN }}
@@ -57,3 +55,4 @@ jobs:
           -PreleaseVersion="${GITHUB_REF_NAME#v}"
           -Pjar="$GITHUB_WORKSPACE/$(ls build/libs/BetterRestarts-*[0-9].jar | head -n 1)"
           -PgameVersions="$(grep '^supportedVersions=' gradle.properties | cut -d= -f2)"
+          -PnotesFile="$GITHUB_WORKSPACE/notes.md"

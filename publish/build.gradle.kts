@@ -1,13 +1,14 @@
 import io.papermc.hangarpublishplugin.model.Platforms
 
 plugins {
+    base
     id("com.modrinth.minotaur") version "2.10.0"
     id("io.papermc.hangar-publish-plugin") version "0.1.4"
 }
 
 val pluginName = "BetterRestarts"
-val version = providers.gradleProperty("releaseVersion").get()
-val versionParts = version.split(Regex("[.-]"))
+val releaseVersion = providers.gradleProperty("releaseVersion").get()
+val versionParts = releaseVersion.split(Regex("[.-]"))
 val major = versionParts[0].toInt()
 val minor = versionParts[1].toInt()
 val stage = when {
@@ -16,26 +17,31 @@ val stage = when {
     else -> "alpha"
 }
 val jarFile = layout.projectDirectory.file(providers.gradleProperty("jar").get())
-val gameVersions = providers.gradleProperty("gameVersions").get().split(",")
-val notes = providers.fileContents(layout.projectDirectory.file("../CHANGELOG.md")).asText.map { text ->
-    val section = text.split(Regex("(?m)^## ")).firstOrNull { it.startsWith("[$version]") }
-    section?.lines()?.drop(1)?.joinToString("\n")?.trim().orEmpty()
+val mcVersions = providers.gradleProperty("gameVersions").get().split(",")
+val notesFile = providers.gradleProperty("notesFile").orNull
+val notes = if (notesFile != null) {
+    providers.fileContents(layout.projectDirectory.file(notesFile)).asText.map { it.trim() }
+} else {
+    providers.fileContents(layout.projectDirectory.file("../CHANGELOG.md")).asText.map { text ->
+        val section = text.split(Regex("(?m)^## ")).firstOrNull { it.startsWith("[$releaseVersion]") }
+        section?.lines()?.drop(1)?.joinToString("\n")?.trim().orEmpty()
+    }
 }
 
 modrinth {
     token.set(providers.environmentVariable("MODRINTH_TOKEN"))
     projectId.set("better-restarts")
-    versionNumber.set(version)
+    versionNumber.set(releaseVersion)
     versionType.set(stage)
     uploadFile.set(jarFile.asFile)
-    gameVersions.addAll(this@Build_gradle.gameVersions)
+    gameVersions.addAll(mcVersions)
     loaders.addAll("bukkit", "spigot", "paper", "purpur", "folia")
     changelog.set(notes)
 }
 
 hangarPublish {
     publications.register("plugin") {
-        this.version.set(this@Build_gradle.version)
+        version.set(releaseVersion)
         id.set(pluginName)
         channel.set(stage.replaceFirstChar { it.uppercase() })
         changelog.set(notes)
