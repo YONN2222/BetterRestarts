@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.0.1]
+
+- Fixed the plugin failing to start on Spigot (it only worked on Paper and its forks)
+- Warn about an unknown restart method or an invalid max-time in config.yml
+- Panel URL, server ID and API key are trimmed, so pasted spaces no longer break the panel method
+
 ## [1.0.0]
 
 - Schedule restarts with `/restart <time> [reason]`, for example `now`, `30s`, `5m`, `1h30m`

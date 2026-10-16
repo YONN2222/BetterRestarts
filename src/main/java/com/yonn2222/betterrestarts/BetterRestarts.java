@@ -54,14 +54,34 @@ public final class BetterRestarts extends JavaPlugin implements Listener {
 
     private void registerCommand(CommandSettings settings) {
         CommandMap map = commandMap();
-        Map<String, Command> known = map.getKnownCommands();
-        Command existing = known.get(settings.name());
-        if (existing != null && settings.replaceBuiltIn() && isReplaceable(existing)) {
-            known.remove(settings.name());
-            getLogger().info("Replaced the built-in /" + settings.name() + " command");
+        Map<String, Command> known = knownCommands(map);
+        if (known != null) {
+            Command existing = known.get(settings.name());
+            if (existing != null && settings.replaceBuiltIn() && isReplaceable(existing)) {
+                known.remove(settings.name());
+                getLogger().info("Replaced the built-in /" + settings.name() + " command");
+            }
         }
         command = new RestartCommand(this, settings.name(), settings.aliases());
         map.register(getName().toLowerCase(), command);
+    }
+
+    @SuppressWarnings("unchecked")
+    private Map<String, Command> knownCommands(CommandMap map) {
+        try {
+            return (Map<String, Command>) map.getClass().getMethod("getKnownCommands").invoke(map);
+        } catch (ReflectiveOperationException ignored) {
+        }
+        for (Class<?> type = map.getClass(); type != null; type = type.getSuperclass()) {
+            try {
+                java.lang.reflect.Field field = type.getDeclaredField("knownCommands");
+                field.setAccessible(true);
+                return (Map<String, Command>) field.get(map);
+            } catch (ReflectiveOperationException | RuntimeException ignored) {
+            }
+        }
+        getLogger().warning("Could not look up the existing commands, the built-in /restart is not replaced");
+        return null;
     }
 
     private static CommandMap commandMap() {
