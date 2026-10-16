@@ -15,14 +15,6 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/YONN2222/BetterRestarts"><img src="https://img.shields.io/badge/GitHub-Repository-2C2C2C?style=for-the-badge&logo=github" alt="Repository"></a>
-  <a href="https://github.com/YONN2222/BetterRestarts/stargazers"><img src="https://img.shields.io/github/stars/YONN2222/BetterRestarts?style=for-the-badge&logo=github&color=DFAB40" alt="Stars"></a>
-  <a href="https://github.com/YONN2222/BetterRestarts/releases"><img src="https://img.shields.io/github/downloads/YONN2222/BetterRestarts/total?style=for-the-badge&logo=github&color=DF6440" alt="Downloads"></a>
-  <a href="https://github.com/YONN2222/BetterRestarts/issues"><img src="https://img.shields.io/github/issues/YONN2222/BetterRestarts?style=for-the-badge&logo=github&color=2C2C2C" alt="Issues"></a>
-  <a href="https://github.com/YONN2222/BetterRestarts/pulls"><img src="https://img.shields.io/github/issues-pr/YONN2222/BetterRestarts?style=for-the-badge&logo=github&color=2C2C2C" alt="Pull requests"></a>
-</p>
-
-<p align="center">
   <a href="https://modrinth.com/plugin/better-restarts">Modrinth</a>
   <a href="https://hangar.papermc.io/YONN2222/BetterRestarts">Hangar</a>
   <a href="https://github.com/YONN2222/BetterRestarts/releases">GitHub Releases</a>
