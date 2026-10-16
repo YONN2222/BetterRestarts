@@ -1,0 +1,38 @@
+prefix: "<gold><bold>Restart</bold> <dark_gray>»</dark_gray> "
+
+actionbar: "<yellow>Server restart in <white><clock></white>"
+actionbar-reason: "<yellow>Server restart in <white><clock></white> <dark_gray>|</dark_gray> <gray><reason></gray>"
+
+scheduled: "<prefix><yellow>The server restarts in <white><time></white>."
+scheduled-reason: "<prefix><yellow>The server restarts in <white><time></white>. <gray>Reason: <reason></gray>"
+reminder: "<prefix><yellow>The server restarts in <white><time></white>."
+reminder-reason: "<prefix><yellow>The server restarts in <white><time></white>. <gray>Reason: <reason></gray>"
+
+title-main: "<gold><bold>Server Restart</bold>"
+title-sub: "<yellow>in <white><time></white>"
+title-sub-reason: "<yellow>in <white><time></white> <gray>(<reason>)</gray>"
+
+countdown-main: "<red><bold><seconds></bold>"
+countdown-sub: "<yellow>Server restarting"
+
+restarting-main: "<red><bold>Restarting</bold>"
+restarting-sub: "<gray>See you in a moment"
+
+cancelled-chat: "<prefix><green>The restart was cancelled by <white><player></white>."
+cancelled-title: "<green><bold>Restart cancelled</bold>"
+cancelled-sub: "<gray>Carry on"
+
+kick: "<yellow>The server is restarting.\n<gray>You can rejoin in a minute."
+
+usage: "<prefix><gray>Usage: <white>/<label> <time|cancel|status|reload> [reason]</white>\n<prefix><gray>Time examples: <white>now, 30s, 5m, 1h, 1h30m</white>"
+invalid-time: "<prefix><red>'<input>' is not a valid time. Try <white>/<label> 5m</white>."
+too-long: "<prefix><red>The maximum is <white><max></white>."
+rescheduled: "<prefix><gray>Countdown changed from <white><old></white> to <white><new></white>."
+too-short: "<prefix><red>That would end the countdown right away. Use <white>now</white> instead."
+nothing-running: "<prefix><red>No restart is scheduled."
+no-permission: "<red>You do not have permission to do that."
+status-idle: "<prefix><gray>No restart is scheduled."
+status-running: "<prefix><yellow>Restart in <white><time></white>."
+status-running-reason: "<prefix><yellow>Restart in <white><time></white> <gray>(<reason>)</gray>."
+status-next: "<prefix><gray>Next scheduled restart: <white><when></white>"
+reloaded: "<prefix><green>Configuration reloaded."

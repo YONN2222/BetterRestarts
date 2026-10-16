@@ -1,0 +1,38 @@
+prefix: "<gold><bold>Redémarrage</bold> <dark_gray>»</dark_gray> "
+
+actionbar: "<yellow>Redémarrage du serveur dans <white><clock></white>"
+actionbar-reason: "<yellow>Redémarrage du serveur dans <white><clock></white> <dark_gray>|</dark_gray> <gray><reason></gray>"
+
+scheduled: "<prefix><yellow>Le serveur redémarre dans <white><time></white>."
+scheduled-reason: "<prefix><yellow>Le serveur redémarre dans <white><time></white>. <gray>Raison : <reason></gray>"
+reminder: "<prefix><yellow>Le serveur redémarre dans <white><time></white>."
+reminder-reason: "<prefix><yellow>Le serveur redémarre dans <white><time></white>. <gray>Raison : <reason></gray>"
+
+title-main: "<gold><bold>Redémarrage du serveur</bold>"
+title-sub: "<yellow>dans <white><time></white>"
+title-sub-reason: "<yellow>dans <white><time></white> <gray>(<reason>)</gray>"
+
+countdown-main: "<red><bold><seconds></bold>"
+countdown-sub: "<yellow>Le serveur redémarre"
+
+restarting-main: "<red><bold>Redémarrage</bold>"
+restarting-sub: "<gray>À tout de suite"
+
+cancelled-chat: "<prefix><green>Le redémarrage a été annulé par <white><player></white>."
+cancelled-title: "<green><bold>Redémarrage annulé</bold>"
+cancelled-sub: "<gray>Vous pouvez continuer à jouer"
+
+kick: "<yellow>Le serveur redémarre.\n<gray>Vous pourrez vous reconnecter dans une minute."
+
+usage: "<prefix><gray>Utilisation : <white>/<label> <durée|cancel|status|reload> [raison]</white>\n<prefix><gray>Exemples de durée : <white>now, 30s, 5m, 1h, 1h30m</white>"
+invalid-time: "<prefix><red>'<input>' n'est pas une durée valide. Essaie <white>/<label> 5m</white>."
+too-long: "<prefix><red>Le maximum autorisé est <white><max></white>."
+rescheduled: "<prefix><gray>Compte à rebours modifié de <white><old></white> à <white><new></white>."
+too-short: "<prefix><red>Cela terminerait le compte à rebours immédiatement. Utilise <white>now</white>."
+nothing-running: "<prefix><red>Aucun redémarrage n'est prévu."
+no-permission: "<red>Tu n'as pas la permission de faire ça."
+status-idle: "<prefix><gray>Aucun redémarrage n'est prévu."
+status-running: "<prefix><yellow>Redémarrage dans <white><time></white>."
+status-running-reason: "<prefix><yellow>Redémarrage dans <white><time></white> <gray>(<reason>)</gray>."
+status-next: "<prefix><gray>Prochain redémarrage prévu : <white><when></white>"
+reloaded: "<prefix><green>Configuration rechargée."

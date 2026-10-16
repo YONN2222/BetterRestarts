@@ -1,0 +1,86 @@
+# BetterRestarts configuration
+# Use /restart reload (permission betterrestarts.reload) to apply changes without restarting.
+
+# Language file from plugins/BetterRestarts/lang/ without the .yml ending.
+# Bundled: en, zh, es, hi, fr, ar, pt, ru, de, ja
+# Copy any file and rename it to create your own language. Messages use MiniMessage.
+language: en
+
+command:
+  # Main command name and aliases, without the slash.
+  name: restart
+  aliases: [brestart]
+  # Replace the built-in Spigot/Paper /restart command with this one.
+  replace-built-in: true
+
+# Longest restart delay somebody may schedule (s, m, h, d).
+max-time: 24h
+
+announcements:
+  action-bar: true
+  chat: true
+  titles: true
+  # Players who join during a countdown see it immediately.
+  show-on-join: true
+  # Seconds remaining at which a chat reminder is sent.
+  chat-at: [1h, 30m, 10m, 5m, 1m, 30s]
+  # Seconds remaining at which a big title is shown.
+  titles-at: [10m, 5m, 1m]
+  # The final countdown shows one title per second starting here. 0 disables it.
+  countdown-from: 10
+
+# All values in seconds.
+title-times:
+  announce:
+    fade-in: 0.25
+    stay: 3.0
+    fade-out: 0.5
+  countdown:
+    fade-in: 0.0
+    stay: 1.1
+    fade-out: 0.1
+
+sounds:
+  enabled: true
+  # Minecraft sound keys, see https://minecraft.wiki/w/Sounds.json
+  tick: block.note_block.pling
+  final: entity.ender_dragon.growl
+  volume: 1.0
+  pitch: 1.0
+  # Pitch for the last three seconds of the countdown.
+  urgent-pitch: 1.6
+
+restart:
+  # How the server is restarted once the countdown ends:
+  #   spigot    - built-in restart, needs a restart script (spigot.yml: settings.restart-script)
+  #   shutdown  - plain stop, use this when a panel, systemd or Docker brings the server back up
+  #               (Pterodactyl and Pelican restart a server that stopped on its own by default)
+  #   panel     - ask a Pterodactyl/Pelican panel to restart the server through its client API
+  #   command   - run the console command below
+  method: shutdown
+  # Kick everybody with the "kick" message shortly before the restart.
+  kick-players: true
+  # Ticks between "restarting" and the kick/restart (20 ticks = 1 second).
+  delay-ticks: 40
+  command: stop
+  panel:
+    # Address of your panel, for example https://panel.example.com
+    url: ""
+    # Short ID of the server: the part after /server/ in the console URL, for example d3aac109
+    server-id: ""
+    # Client API key of an account that may control the server (account page, API credentials).
+    # Can also be provided through the BETTERRESTARTS_PANEL_KEY environment variable.
+    api-key: ""
+
+# Automatic restarts at fixed times. The countdown starts before the restart time.
+schedule:
+  enabled: false
+  # IANA timezone such as Europe/Berlin, or "system".
+  timezone: system
+  # 24 hour times, HH:mm.
+  times: ["04:00"]
+  # Weekdays (MONDAY, TUESDAY, ...). Empty means every day.
+  days: []
+  # How long before the restart the countdown begins.
+  announce-before: 10m
+  reason: Scheduled restart

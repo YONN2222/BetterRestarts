@@ -1,0 +1,38 @@
+prefix: "<gold><bold>再起動</bold> <dark_gray>»</dark_gray> "
+
+actionbar: "<yellow>サーバー再起動まで <white><clock></white>"
+actionbar-reason: "<yellow>サーバー再起動まで <white><clock></white> <dark_gray>|</dark_gray> <gray><reason></gray>"
+
+scheduled: "<prefix><yellow>サーバーは <white><time></white> 後に再起動します。"
+scheduled-reason: "<prefix><yellow>サーバーは <white><time></white> 後に再起動します。<gray>理由：<reason></gray>"
+reminder: "<prefix><yellow>サーバーは <white><time></white> 後に再起動します。"
+reminder-reason: "<prefix><yellow>サーバーは <white><time></white> 後に再起動します。<gray>理由：<reason></gray>"
+
+title-main: "<gold><bold>サーバー再起動</bold>"
+title-sub: "<yellow><white><time></white> 後"
+title-sub-reason: "<yellow><white><time></white> 後 <gray>(<reason>)</gray>"
+
+countdown-main: "<red><bold><seconds></bold>"
+countdown-sub: "<yellow>サーバーを再起動します"
+
+restarting-main: "<red><bold>再起動中</bold>"
+restarting-sub: "<gray>また後で"
+
+cancelled-chat: "<prefix><green><white><player></white> が再起動をキャンセルしました。"
+cancelled-title: "<green><bold>再起動をキャンセル</bold>"
+cancelled-sub: "<gray>そのままお楽しみください"
+
+kick: "<yellow>サーバーを再起動しています。\n<gray>1分後に再度参加できます。"
+
+usage: "<prefix><gray>使い方：<white>/<label> <時間|cancel|status|reload> [理由]</white>\n<prefix><gray>時間の例：<white>now, 30s, 5m, 1h, 1h30m</white>"
+invalid-time: "<prefix><red>「<input>」は有効な時間ではありません。<white>/<label> 5m</white> のように入力してください。"
+too-long: "<prefix><red>指定できる最大は <white><max></white> です。"
+rescheduled: "<prefix><gray>カウントダウンを <white><old></white> から <white><new></white> に変更しました。"
+too-short: "<prefix><red>これだとカウントダウンがすぐ終わります。<white>now</white> を使ってください。"
+nothing-running: "<prefix><red>予定されている再起動はありません。"
+no-permission: "<red>この操作を行う権限がありません。"
+status-idle: "<prefix><gray>予定されている再起動はありません。"
+status-running: "<prefix><yellow>再起動まで <white><time></white>。"
+status-running-reason: "<prefix><yellow>再起動まで <white><time></white> <gray>(<reason>)</gray>。"
+status-next: "<prefix><gray>次の定期再起動：<white><when></white>"
+reloaded: "<prefix><green>設定を再読み込みしました。"

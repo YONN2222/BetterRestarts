@@ -1,0 +1,38 @@
+prefix: "<gold><bold>Reinicio</bold> <dark_gray>»</dark_gray> "
+
+actionbar: "<yellow>Reinicio del servidor en <white><clock></white>"
+actionbar-reason: "<yellow>Reinicio del servidor en <white><clock></white> <dark_gray>|</dark_gray> <gray><reason></gray>"
+
+scheduled: "<prefix><yellow>El servidor se reiniciará en <white><time></white>."
+scheduled-reason: "<prefix><yellow>El servidor se reiniciará en <white><time></white>. <gray>Motivo: <reason></gray>"
+reminder: "<prefix><yellow>El servidor se reiniciará en <white><time></white>."
+reminder-reason: "<prefix><yellow>El servidor se reiniciará en <white><time></white>. <gray>Motivo: <reason></gray>"
+
+title-main: "<gold><bold>Reinicio del servidor</bold>"
+title-sub: "<yellow>en <white><time></white>"
+title-sub-reason: "<yellow>en <white><time></white> <gray>(<reason>)</gray>"
+
+countdown-main: "<red><bold><seconds></bold>"
+countdown-sub: "<yellow>El servidor se reinicia"
+
+restarting-main: "<red><bold>Reiniciando</bold>"
+restarting-sub: "<gray>Hasta ahora mismo"
+
+cancelled-chat: "<prefix><green><white><player></white> ha cancelado el reinicio."
+cancelled-title: "<green><bold>Reinicio cancelado</bold>"
+cancelled-sub: "<gray>Podéis seguir jugando"
+
+kick: "<yellow>El servidor se está reiniciando.\n<gray>Podrás volver a entrar en un minuto."
+
+usage: "<prefix><gray>Uso: <white>/<label> <tiempo|cancel|status|reload> [motivo]</white>\n<prefix><gray>Ejemplos de tiempo: <white>now, 30s, 5m, 1h, 1h30m</white>"
+invalid-time: "<prefix><red>'<input>' no es un tiempo válido. Prueba con <white>/<label> 5m</white>."
+too-long: "<prefix><red>El máximo permitido es <white><max></white>."
+rescheduled: "<prefix><gray>Cuenta atrás cambiada de <white><old></white> a <white><new></white>."
+too-short: "<prefix><red>Eso terminaría la cuenta atrás al instante. Usa <white>now</white>."
+nothing-running: "<prefix><red>No hay ningún reinicio programado."
+no-permission: "<red>No tienes permiso para hacer eso."
+status-idle: "<prefix><gray>No hay ningún reinicio programado."
+status-running: "<prefix><yellow>Reinicio en <white><time></white>."
+status-running-reason: "<prefix><yellow>Reinicio en <white><time></white> <gray>(<reason>)</gray>."
+status-next: "<prefix><gray>Próximo reinicio programado: <white><when></white>"
+reloaded: "<prefix><green>Configuración recargada."

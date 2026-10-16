@@ -1,0 +1,38 @@
+prefix: "<gold><bold>रीस्टार्ट</bold> <dark_gray>»</dark_gray> "
+
+actionbar: "<yellow>सर्वर रीस्टार्ट में <white><clock></white>"
+actionbar-reason: "<yellow>सर्वर रीस्टार्ट में <white><clock></white> <dark_gray>|</dark_gray> <gray><reason></gray>"
+
+scheduled: "<prefix><yellow>सर्वर <white><time></white> में रीस्टार्ट होगा।"
+scheduled-reason: "<prefix><yellow>सर्वर <white><time></white> में रीस्टार्ट होगा। <gray>कारण: <reason></gray>"
+reminder: "<prefix><yellow>सर्वर <white><time></white> में रीस्टार्ट होगा।"
+reminder-reason: "<prefix><yellow>सर्वर <white><time></white> में रीस्टार्ट होगा। <gray>कारण: <reason></gray>"
+
+title-main: "<gold><bold>सर्वर रीस्टार्ट</bold>"
+title-sub: "<yellow><white><time></white> में"
+title-sub-reason: "<yellow><white><time></white> में <gray>(<reason>)</gray>"
+
+countdown-main: "<red><bold><seconds></bold>"
+countdown-sub: "<yellow>सर्वर रीस्टार्ट हो रहा है"
+
+restarting-main: "<red><bold>रीस्टार्ट हो रहा है</bold>"
+restarting-sub: "<gray>जल्द मिलते हैं"
+
+cancelled-chat: "<prefix><green>रीस्टार्ट को <white><player></white> ने रद्द कर दिया।"
+cancelled-title: "<green><bold>रीस्टार्ट रद्द</bold>"
+cancelled-sub: "<gray>खेलते रहिए"
+
+kick: "<yellow>सर्वर रीस्टार्ट हो रहा है।\n<gray>आप एक मिनट बाद दोबारा जुड़ सकते हैं।"
+
+usage: "<prefix><gray>उपयोग: <white>/<label> <समय|cancel|status|reload> [कारण]</white>\n<prefix><gray>समय के उदाहरण: <white>now, 30s, 5m, 1h, 1h30m</white>"
+invalid-time: "<prefix><red>'<input>' मान्य समय नहीं है। <white>/<label> 5m</white> आज़माएँ।"
+too-long: "<prefix><red>अधिकतम <white><max></white> की अनुमति है।"
+rescheduled: "<prefix><gray>काउंटडाउन <white><old></white> से बदलकर <white><new></white> कर दिया गया।"
+too-short: "<prefix><red>इससे काउंटडाउन तुरंत खत्म हो जाएगा। <white>now</white> का उपयोग करें।"
+nothing-running: "<prefix><red>कोई रीस्टार्ट निर्धारित नहीं है।"
+no-permission: "<red>आपके पास ऐसा करने की अनुमति नहीं है।"
+status-idle: "<prefix><gray>कोई रीस्टार्ट निर्धारित नहीं है।"
+status-running: "<prefix><yellow>रीस्टार्ट में <white><time></white> बाकी।"
+status-running-reason: "<prefix><yellow>रीस्टार्ट में <white><time></white> बाकी <gray>(<reason>)</gray>।"
+status-next: "<prefix><gray>अगला निर्धारित रीस्टार्ट: <white><when></white>"
+reloaded: "<prefix><green>कॉन्फ़िगरेशन फिर से लोड हो गया।"

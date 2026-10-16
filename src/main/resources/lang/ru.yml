@@ -1,0 +1,38 @@
+prefix: "<gold><bold>Перезапуск</bold> <dark_gray>»</dark_gray> "
+
+actionbar: "<yellow>Перезапуск сервера через <white><clock></white>"
+actionbar-reason: "<yellow>Перезапуск сервера через <white><clock></white> <dark_gray>|</dark_gray> <gray><reason></gray>"
+
+scheduled: "<prefix><yellow>Сервер перезапустится через <white><time></white>."
+scheduled-reason: "<prefix><yellow>Сервер перезапустится через <white><time></white>. <gray>Причина: <reason></gray>"
+reminder: "<prefix><yellow>Сервер перезапустится через <white><time></white>."
+reminder-reason: "<prefix><yellow>Сервер перезапустится через <white><time></white>. <gray>Причина: <reason></gray>"
+
+title-main: "<gold><bold>Перезапуск сервера</bold>"
+title-sub: "<yellow>через <white><time></white>"
+title-sub-reason: "<yellow>через <white><time></white> <gray>(<reason>)</gray>"
+
+countdown-main: "<red><bold><seconds></bold>"
+countdown-sub: "<yellow>Сервер перезапускается"
+
+restarting-main: "<red><bold>Перезапуск</bold>"
+restarting-sub: "<gray>Скоро увидимся"
+
+cancelled-chat: "<prefix><green>Перезапуск отменил <white><player></white>."
+cancelled-title: "<green><bold>Перезапуск отменён</bold>"
+cancelled-sub: "<gray>Можно играть дальше"
+
+kick: "<yellow>Сервер перезапускается.\n<gray>Вы сможете зайти снова через минуту."
+
+usage: "<prefix><gray>Использование: <white>/<label> <время|cancel|status|reload> [причина]</white>\n<prefix><gray>Примеры времени: <white>now, 30s, 5m, 1h, 1h30m</white>"
+invalid-time: "<prefix><red>'<input>' не является допустимым временем. Попробуйте <white>/<label> 5m</white>."
+too-long: "<prefix><red>Максимально допустимое время: <white><max></white>."
+rescheduled: "<prefix><gray>Отсчёт изменён с <white><old></white> на <white><new></white>."
+too-short: "<prefix><red>Так отсчёт закончится сразу. Используйте <white>now</white>."
+nothing-running: "<prefix><red>Перезапуск не запланирован."
+no-permission: "<red>У вас нет прав для этого действия."
+status-idle: "<prefix><gray>Перезапуск не запланирован."
+status-running: "<prefix><yellow>Перезапуск через <white><time></white>."
+status-running-reason: "<prefix><yellow>Перезапуск через <white><time></white> <gray>(<reason>)</gray>."
+status-next: "<prefix><gray>Следующий плановый перезапуск: <white><when></white>"
+reloaded: "<prefix><green>Конфигурация перезагружена."
