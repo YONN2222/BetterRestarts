@@ -16,8 +16,8 @@ repositories {
 dependencies {
     compileOnly("io.papermc.paper:paper-api:$paperVersion")
     implementation("org.bstats:bstats-bukkit:3.2.1")
-    implementation("net.kyori:adventure-text-minimessage:4.21.0")
-    implementation("net.kyori:adventure-text-serializer-legacy:4.21.0")
+    implementation("net.kyori:adventure-text-minimessage:5.2.0")
+    implementation("net.kyori:adventure-text-serializer-legacy:5.2.0")
     testImplementation("io.papermc.paper:paper-api:$paperVersion")
     testImplementation(platform("org.junit:junit-bom:5.13.4"))
     testImplementation("org.junit.jupiter:junit-jupiter")
